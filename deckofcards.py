@@ -1,31 +1,11 @@
 print("Card Problem\n")
-
-
-# Functions:
-# Create Card Deck
-def createDeck():
-    deck = []
-    card_nums = list(range(1, 14))
-    card_suites = ['H', 'D', 'S', 'C']
-
-    for x in card_nums:
-        for y in card_suites:
-            deck.append(str(x)+str(y))
-    
-    return deck
-
-
-def createSimpleDeck(num):
-    container = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
-    deck = []
-    i = 0
-    while i < num:
-        deck.append(container[i])
-        i = i + 1
-    return deck
-
-
+# ------------------------------------------
 # Algorithm:
+# Goal: To model the different unique combinations of combining two simple decks
+# ------------------------------------------
+
+# Initiallizing
+from deckofcardsFunctions import *
 
 deck1 = createSimpleDeck(5)
 deck2 = createSimpleDeck(5)
