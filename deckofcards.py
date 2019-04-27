@@ -6,6 +6,7 @@ print("Card Problem\n")
 
 # Initiallizing
 from deckofcardsFunctions import *
+from random import randint
 
 deck1 = createSimpleDeck(5)
 deck2 = createSimpleDeck(5)
@@ -16,9 +17,13 @@ i = 0
 # Dealing Deck1
 print("D:\tDeck1:")
 for i in reversed(range(5)):
-    print(str(deck1[0]), end="   ")
-    deck3.append(deck1[0])
-    deck1.pop(0)
+    dealt = randint(0,len(deck1)-1)
+    print(str(deck1[dealt]), end="   ")
+    
+    deck3.append(deck1[dealt])
+    
+    deck1.pop(dealt)
+    
     print("   ", end="")
     for x in range(i):
         print("" + str(deck1[x]), end="")
